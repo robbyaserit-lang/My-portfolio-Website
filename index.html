@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minimalist Portfolio - Software Engineer & Interface Designer focusing on clean typography, purposeful digital products, and high-performance web systems.">
+  <meta name="keywords" content="portfolio, minimalist, software engineer, product designer, frontend developer, clean design">
+  <meta name="author" content="Robi">
+  <title>ROBI — Minimalist Portfolio & Interface Designer</title>
+
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Background Noise & Grid Texture -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Top Navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Robi Homepage">
+        <span class="logo-mark">R</span>
+        <span class="logo-text">ROBI<span class="dot">.</span></span>
+      </a>
+
+      <!-- Status Pill Desktop -->
+      <div class="status-indicator-badge">
+        <span class="pulse-dot"></span>
+        <span class="status-text">Available for new projects</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#projects" class="nav-link">Work</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Stack</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-pretitle">
+            <span class="mono-tag">ROBI / PORTFOLIO 2026</span>
+            <span class="separator">/</span>
+            <span class="mono-role">CREATIVE DEVELOPER &amp; DESIGNER</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Crafting quiet, purposeful digital products with editorial precision.
+          </h1>
+
+          <p class="hero-description">
+            I engineer minimal web interfaces, robust design systems, and fast digital experiences. Guided by reduction, intentional typography, and pure contrast.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Selected Work</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get in Touch</span>
+            </a>
+            <button class="btn btn-tertiary" id="quickCopyEmailBtn" data-email="hello@robi.design" title="Click to copy email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span class="copy-text">Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Hero Metrics / Ticker -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-value">05+</span>
+              <span class="metric-label">Years of Craft</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value">34</span>
+              <span class="metric-label">Shipped Projects</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value">99.8%</span>
+              <span class="metric-label">Lighthouse Speed</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value">&lt;50ms</span>
+              <span class="metric-label">Interaction Latency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="index-num">01</span>
+            <span class="index-name">SELECTED WORKS</span>
+          </div>
+          <h2 class="section-title">Form follows function.</h2>
+          <p class="section-subtitle">
+            A curated archive of client commissions, full-stack applications, and design experiments.
+          </p>
+
+          <!-- Filter Controls -->
+          <div class="project-filters" role="tablist" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Works (6)</button>
+            <button class="filter-btn" data-filter="engineering" role="tab" aria-selected="false">Engineering</button>
+            <button class="filter-btn" data-filter="design" role="tab" aria-selected="false">UI/UX &amp; Systems</button>
+            <button class="filter-btn" data-filter="creative" role="tab" aria-selected="false">Experimental</button>
+          </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1 -->
+          <article class="project-card" data-category="engineering design" data-id="project-1">
+            <div class="project-preview-wrap">
+              <!-- Geometric Minimalist Mockup Graphic -->
+              <div class="minimal-graphic graphic-monolith">
+                <div class="wireframe-header">
+                  <div class="wireframe-dots"><span></span><span></span><span></span></div>
+                  <div class="wireframe-url">monolith.sys/v3</div>
+                </div>
+                <div class="wireframe-body">
+                  <div class="wire-sidebar">
+                    <div class="wire-bar short"></div>
+                    <div class="wire-bar"></div>
+                    <div class="wire-bar"></div>
+                    <div class="wire-bar short"></div>
+                  </div>
+                  <div class="wire-content">
+                    <div class="wire-hero-box">
+                      <div class="wire-line heading"></div>
+                      <div class="wire-line sub"></div>
+                    </div>
+                    <div class="wire-grid-2">
+                      <div class="wire-card"></div>
+                      <div class="wire-card"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <span class="view-case-study">Examine Case Study</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category">Design System &amp; Web App</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">Monolith Architecture</h3>
+              <p class="project-summary">
+                An ultra-light, token-driven headless design system and accessible component framework built for high-throughput enterprise SaaS.
+              </p>
+              <ul class="project-tags">
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Tailwind CSS</li>
+                <li>WCAG AAA</li>
+              </ul>
+              <div class="project-actions">
+                <button class="btn-text open-modal-btn" data-project="1">
+                  <span>Read Breakdown</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon" title="View Source Code" aria-label="GitHub Repository">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-category="engineering" data-id="project-2">
+            <div class="project-preview-wrap">
+              <div class="minimal-graphic graphic-chronos">
+                <div class="wireframe-header">
+                  <div class="wireframe-dots"><span></span><span></span><span></span></div>
+                  <div class="wireframe-url">chronos.task/engine</div>
+                </div>
+                <div class="wireframe-body timeline-flow">
+                  <div class="time-track">
+                    <div class="time-block" style="width: 35%;"><span>09:00 Deep Work</span></div>
+                    <div class="time-block active" style="width: 45%;"><span>11:30 API Audit</span></div>
+                    <div class="time-block" style="width: 20%;"><span>15:00 Release</span></div>
+                  </div>
+                  <div class="metric-graph">
+                    <svg viewBox="0 0 260 60" class="graph-svg">
+                      <path d="M 0 45 Q 60 10 130 30 T 260 15" fill="none" stroke="currentColor" stroke-width="2" />
+                      <circle cx="130" cy="30" r="4" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <span class="view-case-study">Examine Case Study</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category">Productivity Engine</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">Chronos Time Tracker</h3>
+              <p class="project-summary">
+                A keyboard-first time auditing and sprint focus tool with offline sync, end-to-end encryption, and millisecond analytics.
+              </p>
+              <ul class="project-tags">
+                <li>Next.js</li>
+                <li>Web Workers</li>
+                <li>IndexedDB</li>
+                <li>Chart.js</li>
+              </ul>
+              <div class="project-actions">
+                <button class="btn-text open-modal-btn" data-project="2">
+                  <span>Read Breakdown</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon" title="View Source Code" aria-label="GitHub Repository">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-category="design creative" data-id="project-3">
+            <div class="project-preview-wrap">
+              <div class="minimal-graphic graphic-aura">
+                <div class="wireframe-header">
+                  <div class="wireframe-dots"><span></span><span></span><span></span></div>
+                  <div class="wireframe-url">aura.studio/curated</div>
+                </div>
+                <div class="wireframe-body aura-showcase">
+                  <div class="aura-frame">
+                    <div class="aura-circle"></div>
+                    <div class="aura-crosshair"></div>
+                    <div class="aura-label">COLLECTION NO. 04</div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <span class="view-case-study">Examine Case Study</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category">Editorial &amp; Creative Web</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">Aura Studio Platform</h3>
+              <p class="project-summary">
+                Digital exhibition and archive space designed for a contemporary architectural studio. Smooth inertial scroll and kinetic typography.
+              </p>
+              <ul class="project-tags">
+                <li>WebGL / Three.js</li>
+                <li>CSS Grid</li>
+                <li>Lenis Scroll</li>
+                <li>Typography</li>
+              </ul>
+              <div class="project-actions">
+                <button class="btn-text open-modal-btn" data-project="3">
+                  <span>Read Breakdown</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon" title="View Source Code" aria-label="GitHub Repository">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-category="engineering" data-id="project-4">
+            <div class="project-preview-wrap">
+              <div class="minimal-graphic graphic-nexus">
+                <div class="wireframe-header">
+                  <div class="wireframe-dots"><span></span><span></span><span></span></div>
+                  <div class="wireframe-url">nexus.metrics/stream</div>
+                </div>
+                <div class="wireframe-body code-matrix">
+                  <div class="terminal-line"><span class="t-prompt">$</span> nexus health --region ap-southeast</div>
+                  <div class="terminal-line t-dim">&gt; latency: 14ms | 99.999% uptime</div>
+                  <div class="terminal-line t-dim">&gt; throughput: 28,400 req/sec</div>
+                  <div class="terminal-line"><span class="t-success">[STATUS: OPTIMAL]</span></div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <span class="view-case-study">Examine Case Study</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category">Cloud Metrics &amp; Distributed API</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">Nexus Telemetry</h3>
+              <p class="project-summary">
+                Low-overhead real-time stream monitor handling high-frequency telemetry across distributed edge workers with instant alerting.
+              </p>
+              <ul class="project-tags">
+                <li>Go / Node.js</li>
+                <li>WebSockets</li>
+                <li>Redis</li>
+                <li>Docker</li>
+              </ul>
+              <div class="project-actions">
+                <button class="btn-text open-modal-btn" data-project="4">
+                  <span>Read Breakdown</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon" title="View Source Code" aria-label="GitHub Repository">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card" data-category="design engineering" data-id="project-5">
+            <div class="project-preview-wrap">
+              <div class="minimal-graphic graphic-kanso">
+                <div class="wireframe-header">
+                  <div class="wireframe-dots"><span></span><span></span><span></span></div>
+                  <div class="wireframe-url">kanso.md/editor</div>
+                </div>
+                <div class="wireframe-body editor-preview">
+                  <div class="ed-title"># Reflections on Simplicity</div>
+                  <div class="ed-p">The essence of minimalist design is not the lack of clutter, but the clarity of intention.</div>
+                  <div class="ed-cursor"></div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <span class="view-case-study">Examine Case Study</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category">Desktop Client &amp; Typography</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">Kanso Editor</h3>
+              <p class="project-summary">
+                A zen-mode plain-text and Markdown environment for focused writers. Zero UI noise, custom typographic scale, and local-first storage.
+              </p>
+              <ul class="project-tags">
+                <li>Tauri / Rust</li>
+                <li>Svelte</li>
+                <li>Tailwind</li>
+                <li>Markdown AST</li>
+              </ul>
+              <div class="project-actions">
+                <button class="btn-text open-modal-btn" data-project="5">
+                  <span>Read Breakdown</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon" title="View Source Code" aria-label="GitHub Repository">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card" data-category="creative" data-id="project-6">
+            <div class="project-preview-wrap">
+              <div class="minimal-graphic graphic-voxel">
+                <div class="wireframe-header">
+                  <div class="wireframe-dots"><span></span><span></span><span></span></div>
+                  <div class="wireframe-url">geometry.lab/procedural</div>
+                </div>
+                <div class="wireframe-body isometric-grid">
+                  <div class="cube cube-1"></div>
+                  <div class="cube cube-2"></div>
+                  <div class="cube cube-3"></div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <span class="view-case-study">Examine Case Study</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category">Creative Engineering</span>
+                <span class="project-year">2023</span>
+              </div>
+              <h3 class="project-title">Procedural Isometric Voxel</h3>
+              <p class="project-summary">
+                Interactive real-time canvas experiment exploring mathematical patterns, parametric noise, and monochrome depth shading.
+              </p>
+              <ul class="project-tags">
+                <li>HTML5 Canvas</li>
+                <li>GLSL Shaders</li>
+                <li>Perlin Noise</li>
+                <li>Math</li>
+              </ul>
+              <div class="project-actions">
+                <button class="btn-text open-modal-btn" data-project="6">
+                  <span>Read Breakdown</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-icon" title="View Source Code" aria-label="GitHub Repository">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="index-num">02</span>
+            <span class="index-name">ABOUT &amp; ETHOS</span>
+          </div>
+          <h2 class="section-title">Less, but better.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-column-bio">
+            <p class="lead-bio">
+              Hello, I am Robi. I am an engineer and interface craftsman operating at the cross-section of systematic engineering and minimalist design aesthetics.
+            </p>
+            <p>
+              I believe modern software often suffers from visual excess and needless complexity. My practice is centered on stripping away superficial decoration until only what is vital, fast, and remarkably intuitive remains.
+            </p>
+            <p>
+              Over the last five years, I have architected web systems for high-growth startups, open-source maintainers, and design ateliers. I obsess over the 100ms response window, typographic hierarchy, keyboard navigation, and semantic HTML that stands the test of time.
+            </p>
+
+            <div class="about-key-facts">
+              <div class="fact-row">
+                <span class="fact-label">Location</span>
+                <span class="fact-value">Remote (UTC+8 / Global Collaboration)</span>
+              </div>
+              <div class="fact-row">
+                <span class="fact-label">Core Specialization</span>
+                <span class="fact-value">Design Systems, Modern Frontend, API Architecture</span>
+              </div>
+              <div class="fact-row">
+                <span class="fact-label">Design Language</span>
+                <span class="fact-value">Strict Monochrome, Swiss Grid, International Typographic</span>
+              </div>
+              <div class="fact-row">
+                <span class="fact-label">Editor of Choice</span>
+                <span class="fact-value">Neovim &amp; VS Code (Minimal Keybindings)</span>
+              </div>
+            </div>
+
+            <div class="about-cta-row">
+              <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+              <a href="#experience" class="btn btn-secondary">Review Timeline</a>
+            </div>
+          </div>
+
+          <div class="about-column-principles">
+            <h3 class="principles-heading">Core Operating Principles</h3>
+            <div class="principles-list">
+              <div class="principle-card">
+                <span class="principle-number">01</span>
+                <div class="principle-content">
+                  <h4>Radical Simplicity</h4>
+                  <p>Every element on the screen must fight for its right to exist. If it doesn't clarify the user's intent or accelerate the outcome, it is deleted.</p>
+                </div>
+              </div>
+              <div class="principle-card">
+                <span class="principle-number">02</span>
+                <div class="principle-content">
+                  <h4>Speed as a Design Pillar</h4>
+                  <p>Performance isn't an engineering afterthought—it is the cornerstone of respect for the user's time. Zero lag, instant feedback.</p>
+                </div>
+              </div>
+              <div class="principle-card">
+                <span class="principle-number">03</span>
+                <div class="principle-content">
+                  <h4>Accessible by Default</h4>
+                  <p>A website that isn't accessible to all users is fundamentally broken. Strict keyboard flow, semantic hierarchy, and contrast ratios are mandatory.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Stack Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="index-num">03</span>
+            <span class="index-name">TECHNICAL STACK</span>
+          </div>
+          <h2 class="section-title">Tools of the discipline.</h2>
+          <p class="section-subtitle">
+            Reliable, modern, and proven technologies chosen for stability, performance, and ergonomics.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1 -->
+          <div class="skill-group-card">
+            <div class="group-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="group-icon"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <h3>Frontend &amp; Engineering</h3>
+            </div>
+            <p class="group-desc">Building resilient, responsive, and lightweight client applications.</p>
+            <div class="tags-cluster">
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">React 19</span>
+              <span class="tech-pill">Next.js App Router</span>
+              <span class="tech-pill">Vanilla JavaScript (ESNext)</span>
+              <span class="tech-pill">HTML5 Semantic</span>
+              <span class="tech-pill">Tailwind CSS</span>
+              <span class="tech-pill">Modern CSS / Grid / Flexbox</span>
+              <span class="tech-pill">WebSockets</span>
+              <span class="tech-pill">Service Workers &amp; PWA</span>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-group-card">
+            <div class="group-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="group-icon"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              <h3>UI/UX &amp; Design Systems</h3>
+            </div>
+            <p class="group-desc">Translating complex systems into clear, intuitive human interfaces.</p>
+            <div class="tags-cluster">
+              <span class="tech-pill">Design Tokens</span>
+              <span class="tech-pill">Figma &amp; Auto Layout</span>
+              <span class="tech-pill">Typographic Hierarchy</span>
+              <span class="tech-pill">Micro-interactions</span>
+              <span class="tech-pill">Design Audits</span>
+              <span class="tech-pill">Wireframing</span>
+              <span class="tech-pill">Prototyping</span>
+              <span class="tech-pill">WCAG 2.1 AAA Accessibility</span>
+              <span class="tech-pill">Information Architecture</span>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-group-card">
+            <div class="group-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="group-icon"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              <h3>Backend &amp; Infrastructure</h3>
+            </div>
+            <p class="group-desc">Robust data layers, serverless routines, and reliable delivery.</p>
+            <div class="tags-cluster">
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">RESTful API Architecture</span>
+              <span class="tech-pill">GraphQL</span>
+              <span class="tech-pill">PostgreSQL / Supabase</span>
+              <span class="tech-pill">Prisma ORM</span>
+              <span class="tech-pill">Redis Cache</span>
+              <span class="tech-pill">Git / GitHub Workflows</span>
+              <span class="tech-pill">Docker</span>
+              <span class="tech-pill">Cloudflare / Vercel Edge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Timeline Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="index-num">04</span>
+            <span class="index-name">CAREER TIMELINE</span>
+          </div>
+          <h2 class="section-title">Experience &amp; Milestones</h2>
+          <p class="section-subtitle">
+            A chronological track record of impact, shipped features, and technical leadership.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-period">
+              <span class="period-badge">2024 — Present</span>
+            </div>
+            <div class="timeline-content">
+              <div class="role-header">
+                <h3 class="role-title">Lead Frontend Engineer</h3>
+                <span class="company-name">Synthetix Software Lab</span>
+              </div>
+              <p class="role-desc">
+                Spearheaded the complete ground-up redesign of the core telemetry dashboard. Reduced client-side bundle size by 48% and established company-wide accessibility benchmarks.
+              </p>
+              <div class="role-achievements">
+                <span>• Mentored 6 mid-level engineers in component architecture</span>
+                <span>• Implemented zero-runtime CSS tokens boosting render times by 32%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-period">
+              <span class="period-badge">2022 — 2024</span>
+            </div>
+            <div class="timeline-content">
+              <div class="role-header">
+                <h3 class="role-title">Senior Product Designer &amp; Developer</h3>
+                <span class="company-name">Studio Minimal Collective</span>
+              </div>
+              <p class="role-desc">
+                Delivered 18+ high-end web experiences for clients in architecture, fine art, and fintech. Authored custom interaction patterns and headless e-commerce templates.
+              </p>
+              <div class="role-achievements">
+                <span>• Won 3 Awwwards Site of the Day honors for editorial web typography</span>
+                <span>• Engineered bespoke real-time multi-currency checkout flow</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-period">
+              <span class="period-badge">2020 — 2022</span>
+            </div>
+            <div class="timeline-content">
+              <div class="role-header">
+                <h3 class="role-title">UI/UX Web Developer</h3>
+                <span class="company-name">Horizon Cloud Solutions</span>
+              </div>
+              <p class="role-desc">
+                Constructed reusable React component libraries, conducted user research interviews, and integrated REST APIs across SaaS customer portals.
+              </p>
+              <div class="role-achievements">
+                <span>• Boosted customer onboarding completion rates by 27%</span>
+                <span>• Maintained 99.9% unit test coverage on core financial forms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-period">
+              <span class="period-badge">2019 — 2020</span>
+            </div>
+            <div class="timeline-content">
+              <div class="role-header">
+                <h3 class="role-title">Independent Designer &amp; Open Source Author</h3>
+                <span class="company-name">Self-Employed</span>
+              </div>
+              <p class="role-desc">
+                Released open-source themes, minimal typography boilerplates, and collaborated with indie creators globally.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-header">
+            <div class="section-eyebrow">
+              <span class="index-num">05</span>
+              <span class="index-name">GET IN TOUCH</span>
+            </div>
+            <h2 class="contact-title">Let’s build something enduring.</h2>
+            <p class="contact-sub">
+              Have an upcoming product, a redesign, or a challenging problem that requires rigorous attention to detail? My inbox is always open.
+            </p>
+
+            <div class="direct-contact-row">
+              <div class="contact-pill-item">
+                <span class="pill-label">Direct Email</span>
+                <div class="pill-action-group">
+                  <a href="mailto:hello@robi.design" class="pill-link">hello@robi.design</a>
+                  <button class="copy-pill-btn" id="copyDirectEmailBtn" data-email="hello@robi.design" aria-label="Copy email address" title="Copy email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-pill-item">
+                <span class="pill-label">Location</span>
+                <span class="pill-value">Remote / Worldwide</span>
+              </div>
+
+              <div class="contact-pill-item">
+                <span class="pill-label">Response Time</span>
+                <span class="pill-value">Within 24 Hours</span>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-list">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <span>GitHub</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <span>LinkedIn</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <span>X (Twitter)</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <span>Dribbble</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Your Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Elena Rostova" required autocomplete="name">
+                  <span class="form-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="elena@company.com" required autocomplete="email">
+                  <span class="form-error" id="emailError"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="projectType" class="form-label">Project Interest</label>
+                <div class="custom-select-wrapper">
+                  <select id="projectType" name="projectType" class="form-select">
+                    <option value="web-app">Full-Stack Web Application</option>
+                    <option value="design-system">Design System &amp; UI Architecture</option>
+                    <option value="redesign">Website Redesign &amp; Performance</option>
+                    <option value="consulting">Technical Advisory / Consulting</option>
+                    <option value="other">Other Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Project Details <span class="required">*</span></label>
+                <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Tell me about your timeline, scope, and objectives..." required></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                <span class="btn-text-default">Send Message</span>
+                <span class="btn-text-loading" style="display: none;">Sending...</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="send-icon"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+
+              <div class="form-success-banner" id="formSuccess" style="display: none;" role="alert">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Message received. I will review and reply within 24 hours.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimalist Project Modal / Case Study Lightbox -->
+  <div class="modal-overlay" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="modal-body" id="modalBody">
+        <!-- Content injected dynamically via main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="f-mark">ROBI</span>
+          <span class="f-copy">&copy; 2026. Designed with restraint.</span>
+        </div>
+        <p class="footer-colophon">
+          Curated in strict Monochrome (Black, White, Gray). Pure semantic HTML, modern CSS variables, zero heavy dependencies.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <!-- Live Clock -->
+        <div class="footer-clock">
+          <span class="clock-label">LOCAL TIME</span>
+          <span class="clock-time" id="liveClock">--:--:-- UTC+8</span>
+        </div>
+
+        <a href="#hero" class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
